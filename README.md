@@ -1,0 +1,1 @@
+This is a basic boilerplate for storing data on IPFS. I published the full tutorial for this on Hashnode.com - https://hayleyiscoding.hashnode.dev/storing-data-on-ipfs-using-web3storage-cl6s2qu9b0ankfdnvhrs7dz1v. The title is 'Storing Data on IPFS using Web3.Storage!' by Hayley is Coding
