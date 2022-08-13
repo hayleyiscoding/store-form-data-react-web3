@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Web3Storage } from "web3.storage";
 import { Buffer } from "buffer";
-import { create, urlSource } from "ipfs-http-client";
 
 function makeStorageClient() {
   return new Web3Storage({
@@ -9,12 +8,10 @@ function makeStorageClient() {
   });
 }
 
-window.Buffer = Buffer;
-
 function App() {
   const [username, setUsername] = useState("");
   const [link, setLink] = useState("");
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState(null);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -35,6 +32,10 @@ function App() {
       alert(
         `Oops! Something went wrong. Please refresh and try again. Error ${error}`
       );
+    } finally {
+      setUsername("");
+      setLink("");
+      setImage(null);
     }
   }
 
